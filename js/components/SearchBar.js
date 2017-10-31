@@ -1,12 +1,17 @@
 import React from 'react';
 const Component = React.Component;
 
-
 class SearchBar extends Component {
+
+    handleChange(event) {
+        console.log("search -> " + event.target.value);
+        this.props.onTitleChange(event.target.value);
+    }
+
     render() {
         return (
-            <div>
-                <input value="{this.params.Value}" />    
+            <div className="search-bar text-center">
+                <input className="" onChange={this.handleChange.bind(this)} placeholder="Search Key" />    
             </div>
         )
     }

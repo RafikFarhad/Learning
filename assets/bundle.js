@@ -74,9 +74,9 @@
 	        _react2.default.createElement(
 	            'h1',
 	            null,
-	            ' I\'m REACT '
+	            ' I\'m REACT000 '
 	        ),
-	        _react2.default.createElement(_SearchBar2.default, { Value: 'serach key' })
+	        _react2.default.createElement(_SearchBar2.default, { Value: "serach key" })
 	    );
 	};
 
