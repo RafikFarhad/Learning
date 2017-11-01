@@ -2310,7 +2310,7 @@ var Video = function (_Component) {
                 _react2.default.createElement(
                     "div",
                     { className: "embed-responsive embed-responsive-16by9" },
-                    _react2.default.createElement("iframe", { src: "http://www.youtube.com/embed/" + this.props.video.id.videoId, frameborder: "0" })
+                    _react2.default.createElement("iframe", { src: "https://www.youtube.com/embed/" + this.props.video.id.videoId })
                 ),
                 _react2.default.createElement(
                     "div",
