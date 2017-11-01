@@ -21,7 +21,7 @@ class Video extends Component {
         return (
             <div>
                 <div className="embed-responsive embed-responsive-16by9">
-                    <iframe src={"http://www.youtube.com/embed/"+this.props.video.id.videoId} frameborder="0"></iframe>
+                    <iframe src={"https://www.youtube.com/embed/"+this.props.video.id.videoId} frameborder="0"></iframe>
                 </div>
                 <div className="title">
                     <h4>{this.props.video.snippet.title}</h4>
