@@ -4,7 +4,7 @@ const Component = React.Component;
 class SearchBar extends Component {
 
     handleChange(event) {
-        console.log("search -> " + event.target.value);
+        // console.log("search -> " + event.target.value);
         this.props.onKeyChange(event.target.value);
     }
 

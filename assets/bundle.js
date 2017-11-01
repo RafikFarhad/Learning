@@ -2041,7 +2041,7 @@ var SearchBar = function (_Component) {
     _createClass(SearchBar, [{
         key: "handleChange",
         value: function handleChange(event) {
-            console.log("search -> " + event.target.value);
+            // console.log("search -> " + event.target.value);
             this.props.onKeyChange(event.target.value);
         }
     }, {
@@ -2152,7 +2152,7 @@ var VideoItem = function (_Component) {
         var _this = _possibleConstructorReturn(this, (VideoItem.__proto__ || Object.getPrototypeOf(VideoItem)).call(this, props));
 
         _this.onSelectClick = function (event) {
-            console.log(this.props.id);
+            // console.log(this.props.id);
             this.props.onSelectClick(this.props.id);
         };
 
@@ -2236,7 +2236,7 @@ var VideoList = function (_Component) {
         value: function render() {
             var _this2 = this;
 
-            console.log(this.props.videos);
+            // console.log(this.props.videos);
             return _react2.default.createElement(
                 'ul',
                 { className: 'list-group' },

@@ -13,7 +13,7 @@ class VideoList extends Component {
     }
 
     render() {
-        console.log(this.props.videos);
+        // console.log(this.props.videos);
         return (
             <ul className="list-group">
                 {

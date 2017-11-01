@@ -9,7 +9,7 @@ class VideoItem extends Component {
     }
 
     onSelectClick = function (event) {
-        console.log(this.props.id);
+        // console.log(this.props.id);
         this.props.onSelectClick(this.props.id);
     }
 
