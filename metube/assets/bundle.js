@@ -1496,7 +1496,7 @@ var Root = function (_Component) {
             return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_Title2.default, { title: 'MeTube' }),
+                _react2.default.createElement(_Title2.default, { title: 'metube' }),
                 _react2.default.createElement(_SearchBar2.default, {
                     onKeyChange: onKeyChange.bind(this)
                 }),
