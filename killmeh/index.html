@@ -46,7 +46,9 @@
             <p class="status"> {{health1}} - ({{won1}}) </p>
             <div class="progress">
                 <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-                     style="" :style="{width: health1+'%'}"></div>
+                     :class="{'bg-success':health1>=30, 'bg-danger':health1<30}"
+                     style=""
+                     :style="{width: health1+'%'}"></div>
             </div>
         </div>
         <div class="col-md-6">
@@ -54,7 +56,9 @@
             <p class="status"> {{health2}} - ({{won2}}) </p>
             <div class="progress">
                 <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-                     style="" :style="{width: health2+'%'}"> </div>
+                     :class="{'bg-success':health2>=30, 'bg-danger':health2<30}"
+                     style=""
+                     :style="{width: health2+'%'}"> </div>
             </div>
         </div>
     </div>
@@ -66,8 +70,21 @@
             <div v-else="">
                 <button @click="attack" class="btn btn-md btn-warning">Attack</button>
                 <button @click="heal" class="btn btn-md btn-info">Heal</button>
-
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-success">
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-danger">
+                </li>
+            </ul>
         </div>
     </div>
 </div>
