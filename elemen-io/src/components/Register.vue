@@ -1,5 +1,10 @@
 <template>
-    <div>
+    <div
+    v-loading="form.loading"
+    element-loading-text="Loading..."
+    element-loading-spinner="el-icon-loading"
+    element-loading-background="rgba(0, 0, 0, 0.8)"
+    >
         <el-row :gutter="20">
             <el-col :span="12" :offset="6">
                 <div class="box">
@@ -9,7 +14,7 @@
                                 label="Name"
                                 prop="name"
                                 :rules="[
-                                    { required: true, message: 'Name is required' }
+                                    { required: false, message: 'Name is required' }
                                 ]"
                         >
                             <el-input v-model.name="form.name"></el-input>
@@ -35,7 +40,7 @@
                                 label="Phone"
                                 prop="phone"
                                 :rules="[
-                                  { required: true, message: 'Phone is required'},
+                                  { required: false, message: 'Phone is required'},
                                 ]">
                             <el-input type="phone" v-model.phone="form.phone"></el-input>
                         </el-form-item>
@@ -62,7 +67,8 @@
                     email: '',
                     password: '',
                     phone: '',
-                    country: ''
+                    country: '',
+                    loading: false
                 }
             }
         },
@@ -70,7 +76,8 @@
             submitForm (formName) {
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
-                        alert('submit!')
+                        this.form.loading = true
+                        this.$store.dispatch('signup', this.form)
                     } else {
                         console.log('error submit!!')
                         return false

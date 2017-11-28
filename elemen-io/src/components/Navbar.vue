@@ -1,7 +1,6 @@
 <template>
     <div class="nav">
         <el-menu
-                :default-active="activeIndex"
                 class="el-menu-demo"
                 mode="horizontal"
                 @select="handleSelect"
@@ -14,17 +13,21 @@
                      </el-menu-item>
                 </router-link>
             <el-row index="2" type="flex" class="row-bg" justify="end">
-                <router-link :to="{name: 'register'}">
-                    <el-menu-item index="register" :active="activeIndex">
+                <router-link v-if="!auth" :to="{name: 'register'}">
+                    <el-menu-item index="register">
                         Register
                     </el-menu-item>
                 </router-link>
-
-                <el-menu-item index="signup">
-                    <a href="#">
-                        Sign up
-                    </a>
-                </el-menu-item>
+                <router-link v-if="!auth" :to="{name: 'login'}">
+                    <el-menu-item index="name" >
+                        Login
+                    </el-menu-item>
+                </router-link>
+                <router-link v-if="auth" :to="{name: 'dashboard'}">
+                    <el-menu-item index="dashboard">
+                       Dashboard
+                    </el-menu-item>
+                </router-link>
             </el-row>
         </el-menu>
     </div>
@@ -35,6 +38,11 @@
         data () {
             return {
                 activeIndex: 'home'
+            }
+        },
+        computed: {
+            auth () {
+                return this.$store.getters.isAuthenticated
             }
         },
         methods: {
