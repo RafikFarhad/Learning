@@ -76,9 +76,15 @@
         min-height: 500px;
         /*background: rgba(187, 191, 234, 0.45);*/
     }
-
+/* 
     .main {
         height: 100%;
-    }
+        width: 90%;
+        margin: 0px;
+    } */
+
+    /* .el-row {
+        margin: 0px 50px;
+    } */
 
 </style>

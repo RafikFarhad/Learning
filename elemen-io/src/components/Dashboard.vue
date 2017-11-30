@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h1>Welcome to hell !!!</h1>
+      <h1>Hello {{ user!=null?user.name:'null' }} !!!</h1>
   </div>
 </template>
 
@@ -12,14 +12,11 @@
             }
         },
         computed: {
-            getUser () {
-                this.user = this.store.getters.getUser
-            }
+        },
+        mounted () {
+            this.user = this.$store.getters.getUser
         },
         methods: {
-            created () {
-                this.getUser()
-            }
         }
     }
 </script>

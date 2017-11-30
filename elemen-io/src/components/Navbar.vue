@@ -1,9 +1,8 @@
 <template>
-    <div class="nav">
+    <el-header>
         <el-menu
                 class="el-menu-demo"
                 mode="horizontal"
-                @select="handleSelect"
                 background-color="#545c64"
                 text-color="#fff"
                 active-text-color="#ffd04b">
@@ -30,7 +29,7 @@
                 </router-link>
             </el-row>
         </el-menu>
-    </div>
+    </el-header>
 </template>
 
 <script>
@@ -54,8 +53,10 @@
 </script>
 
 <style scoped>
-    .nav {
+    .el-header {
         margin: 0px;
+        width: 100%;
+        padding: 0px;
     }
 
     a {
